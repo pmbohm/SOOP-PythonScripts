@@ -266,8 +266,7 @@ if __name__ == "__main__":
         
         filesort = soop_FileSort()
         #            processFiles(self,useDataFabric,origDir,userDestDir,fileExtension):
-        #filesort.processFiles(True,"/usr/local/emii/data/soop_realtime","/home/pmbohm/storage_root/public/SOOP/XBT/soop_realtime","csv")
-        filesort.processFiles(False, "/var/lib/SOOP_cache/ships/","","nc")
+        filesort.processFiles(False, "/mnt/xvdb1/SOOP_cache/ships/","","nc")
       
         filesort.close()
         

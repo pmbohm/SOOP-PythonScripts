@@ -53,7 +53,8 @@ class soop_realtime_processSBD:
                 'DDPH':'Merkur-Sky',
                 'YJZC5':'Pacific-Gas',
                 'A8JM5':'ANL-Benalla',
-                '3FLZ':'Tropical-Islander'                     
+                '3FLZ':'Tropical-Islander',
+                'VRCF6':'Santos-Express'                 
         }
 
         # place for log files. Same as FTPGetter.py
@@ -631,5 +632,5 @@ class soop_realtime_processSBD:
 
 if __name__ == "__main__":
         processSBD = soop_realtime_processSBD()
-        processSBD.processAllFiles("/var/lib/SOOP_cache/sbddata/")
+        processSBD.processAllFiles("/mnt/xvdb1/SOOP_cache/sbddata/")
         
