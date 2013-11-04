@@ -32,7 +32,8 @@ class soop_FileSort:
                                 'VRZN9': 'Pacific-Celebes',
                                 'VHW6005':'RV-Linnaeus',
                                 'HSB3402':'MV-Xutra-Bhum',
-                                'HSB3403':'MV-Wana-Bhum'
+                                'HSB3403':'MV-Wana-Bhum',
+                                'VRUB2': 'Chenan'
                                 }
 
         self.data_codes = {'FMT':'flux_product','MT':'meteorological_sst_observations' }
