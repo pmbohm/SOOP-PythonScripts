@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
 
     getter = FTPGetter.FTPGetter()    
-    local_dir = "/mnt/xvdb1/SOOP_cache/"
+    local_dir = "/opt/SOOP_cache/"
     filesChanged = False;
     
     try:
