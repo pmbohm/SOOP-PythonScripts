@@ -54,7 +54,8 @@ class soop_realtime_processSBD:
                 'YJZC5':'Pacific-Gas',
                 'A8JM5':'ANL-Benalla',
                 '3FLZ':'Tropical-Islander',
-                'VRCF6':'Santos-Express'                 
+                'VRCF6':'Santos-Express',       
+		'9V9713':'Shengking'         
         }
 
         # place for log files. Same as FTPGetter.py
