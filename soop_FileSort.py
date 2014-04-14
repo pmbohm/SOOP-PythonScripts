@@ -36,6 +36,11 @@ class soop_FileSort:
                                 'VRUB2': 'Chenan'
                                 }
 
+        self.blackList = [
+                            'IMOS_SOOP-SST_MT_20111103T000000Z_9HA2479_FV01_C-20120528T072251Z.nc',
+                            'IMOS_SOOP-SST_T_20130215T005900Z_HSB3403_FV01_C-20130216T001306Z.nc'
+                         ]
+
         self.data_codes = {'FMT':'flux_product','MT':'meteorological_sst_observations' }
         
         self.datasetGroup = "users" # the linux group and user must exist
@@ -180,6 +185,12 @@ class soop_FileSort:
                         self.errorFiles.append("Failed to create directory " + targetDir )
                         error = 1
 
+                # blacklist check
+                if fname in self.blackList:      
+                    print "Ignoreing Blacklisted file " + fname 
+                    self.errorFiles.append("Ignoreing Blacklisted file " + fname )
+                    error = 1
+
                 if not error:
                     targetFile = targetDir+'/'+fname
 
@@ -266,8 +277,9 @@ if __name__ == "__main__":
         df.connectStorage()
         
         filesort = soop_FileSort()
-        #            processFiles(self,useDataFabric,origDir,userDestDir,fileExtension):
-        filesort.processFiles(False, "/mnt/xvdb1/SOOP_cache/ships/","","nc")
+        #        processFiles(self,useDataFabric,origDir,userDestDir,fileExtension):
+        #  Setup for dev testing below Philip
+        filesort.processFiles(False, "/opt/SOOP_cache/ships/","/home/pmbohm/Documents/DATA","nc")
       
         filesort.close()
         
