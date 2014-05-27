@@ -38,7 +38,8 @@ class soop_FileSort:
 
         self.blackList = [
                             'IMOS_SOOP-SST_MT_20111103T000000Z_9HA2479_FV01_C-20120528T072251Z.nc',
-                            'IMOS_SOOP-SST_T_20130215T005900Z_HSB3403_FV01_C-20130216T001306Z.nc'
+                            'IMOS_SOOP-SST_T_20130215T005900Z_HSB3403_FV01_C-20130216T001306Z.nc',
+                            'IMOS_SOOP-SST_MT_20140409T010000Z_VROB_FV01_C-20140413T233225Z.nc'
                          ]
 
         self.data_codes = {'FMT':'flux_product','MT':'meteorological_sst_observations' }
