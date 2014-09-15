@@ -23,7 +23,7 @@ class FTPGetter:
                 self.ncftp = "" # its in the path now
                 self.thisFileLocation = os.getcwd()+ '/' 
                 self.logFileHome = "/home/pmbohm/script_logs"
-                self.datasetGroup = "users" # the linux group must exist
+                self.datasetGroup = "pmbohm" # the linux group must exist
                 self.fileTypeDefault = "nc" # no 'dot'   
                 self.ftp_username = None
                 self.ftp_password = None
