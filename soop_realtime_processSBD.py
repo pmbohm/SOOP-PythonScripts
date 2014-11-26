@@ -18,7 +18,7 @@ class soop_realtime_processSBD:
         self.database = "db.emii.org.au" 
         
         # switch FOR TESTING
-        self.databaseFileWrite = True 
+        self.databaseFileWrite = True
         
         if self.databaseFileWrite == False:
             print "\n\n#### THIS IS A TEST RUN ####"
@@ -56,7 +56,8 @@ class soop_realtime_processSBD:
                 '3FLZ':'Tropical-Islander',
                 'VRCF6':'Santos-Express', 
                 'VRUB2': 'Chenan',       
-		'9V9713':'Shengking'         
+		'9V9713':'Shengking'
+                '5WDC' : 'Capitaine-Fearn'         
         }
 
         # place for log files. Same as FTPGetter.py
@@ -369,9 +370,8 @@ class soop_realtime_processSBD:
                 f.close()
                 
                 os.popen("chmod g+w " + self.sql_filename).readline()
-                os.popen("chgrp "+self.datasetGroup +" " + self.sql_filename).readline()
-                
-                
+                #os.popen("chgrp "+self.datasetGroup +" " + self.sql_filename).readline()
+                        
                 
                     
             except Exception, e:
@@ -503,12 +503,12 @@ class soop_realtime_processSBD:
                     f.close()
 
                     os.popen("chmod g+w " + filename).readline()
-                    os.popen("chgrp "+self.datasetGroup +" " + filename).readline()
+                    #os.popen("chgrp "+self.datasetGroup +" " + filename).readline()
                 else:
                     err= "Dry run only no CSV file written: "  + filename    
                     
             except Exception, e:
-              err= "ERROR: problem opening " + filename + " to write the CSV. exiting..  " + str(e)          
+              err= "ERROR: problem opening " + os.getcwd() + filename + " to write the CSV. exiting..  " + str(e)          
               self.errorFiles.append(err)
               self.writetoLog()
               sys.exit()
@@ -634,5 +634,5 @@ class soop_realtime_processSBD:
 
 if __name__ == "__main__":
         processSBD = soop_realtime_processSBD()
-        processSBD.processAllFiles("/mnt/xvdb1/SOOP_cache/sbddata/")
+        processSBD.processAllFiles("/mnt/ebs/SOOP_cache/sbddata/")
         
