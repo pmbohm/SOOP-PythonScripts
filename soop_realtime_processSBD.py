@@ -56,7 +56,7 @@ class soop_realtime_processSBD:
                 '3FLZ':'Tropical-Islander',
                 'VRCF6':'Santos-Express', 
                 'VRUB2': 'Chenan',       
-		'9V9713':'Shengking'
+		'9V9713':'Shengking',
                 '5WDC' : 'Capitaine-Fearn'         
         }
 
