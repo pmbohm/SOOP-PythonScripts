@@ -48,6 +48,7 @@ class soop_FileSort:
         # place where sorted files go
         self.dataRoot = "/mnt/imos-t3/IMOS"
         self.destDir = self.dataRoot  + "/opendap/SOOP" # temp value only if not supplied
+        self.emailAddress = "pmbohm@utas.edu.au"
 
         # place for log files. Same as FTPGetter.py
         self.localBaseDir = "/home/pmbohm/script_logs/"
@@ -243,7 +244,7 @@ class soop_FileSort:
                     self.errorFiles.append(err)
                     # common error that needs  our attention
                     email = sendEmail.sendEmail()
-                    email.sendEmail("pmbohm@utas.edu.au","SOOP File sorter- Unrecognised ship code",err)
+                    email.sendEmail(self.emailAddress,"SOOP File sorter- Unrecognised ship code",err)
         else:
             #print "Unrecognised file "+ root+"/"+ fname + " found by the filesorter"
             err = "Ignoring file "+ root+"/"+ fname + " not in agreed format"
