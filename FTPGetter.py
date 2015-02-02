@@ -523,9 +523,5 @@ class FTPGetter:
 
 if __name__ == "__main__":
         getter = FTPGetter()
-        # processDataset(self, url, localDir, filetype , username, password, getsubdirs, useStorage, useFiles2ProcessFile)
-        #getter.processDataset("ftp://ftp.bom.gov.au/register/bom404/outgoing/IMOS/SHIPS", "/var/lib/python_cron_data/ships/",'','bom404','Vee8soxo', True, False, False)
-        #getter.processDataset("ftp://ftp.bom.gov.au/register/bom404/outgoing/IMOS/SHIPS", "/var/lib/python_cron_data/ships",'','bom404','Vee8soxo', True, False, True)
-        getter.checkLocalDataset("ftp://ftp.bom.gov.au/register/bom404/outgoing/IMOS/SHIPS", "/var/lib/python_cron_data/ships/",'','bom404','Vee8soxo', True, False)
-        
+
         getter.close()
