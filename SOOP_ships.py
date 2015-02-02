@@ -15,7 +15,7 @@ if __name__ == "__main__":
     
     try:
         
-        filesChanged =  getter.processDataset("ftp://ftp.bom.gov.au/register/bom404/outgoing/IMOS/SHIPS", new_local_dir + "ships",'','bom404','Vee8soxo', True, False, True)
+        filesChanged =  getter.processDataset("ftp://ftp.bom.gov.au/register/bom404/outgoing/IMOS/SHIPS", new_local_dir + "ships",'','[add]','[add]', True, False, True)
     except Exception, e:
         print "ERROR: uncaught error occured with ftp://ftp.bom.gov.au/register/bom404/outgoing/IMOS/SHIPS" + str(e)
         pass
